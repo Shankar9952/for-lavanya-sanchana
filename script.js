@@ -9,7 +9,7 @@ window.onload = function () {
 
   yesBtn.onclick = function () {
 
-  title.innerText = "Happy Valentine's Day Lavanya-Sanchana ❤️ I know This is My first and final wish to you. I'll always love you, even from a distance! Destiny brought us close, but couldn't keep us together";
+  title.innerText = "Happy Valentine's Day Lavanya-Sanchana ❤️ Sorry endaka nenu ala behvae chesinaduku really sorry but nuvvu tappuga em anukunna akkada em ledu ";
 
   question.style.display = "none";
   buttons.style.display = "none";
@@ -43,5 +43,6 @@ window.onload = function () {
   }
 
 };
+
 
 
