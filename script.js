@@ -9,13 +9,13 @@ window.onload = function () {
 
   yesBtn.onclick = function () {
 
-  title.innerText = "Happy Valentines Day Lavanya-Sanchana❤️ I love you so much!";
+  title.innerText = "Happy Valentine's Day Lavanya-Sanchana ❤️ I know This is My first and final wish to you. I'll always love you, even from a distance! Destiny brought us close, but couldn't keep us together";
 
   question.style.display = "none";
   buttons.style.display = "none";
 
   // Change background image
-  document.body.style.background = "url('')";
+  document.body.style.background = "url('sanchImj.jpeg')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 
