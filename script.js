@@ -9,13 +9,13 @@ window.onload = function () {
 
   yesBtn.onclick = function () {
 
-  title.innerText = "Happy Valentine's Day Lavanya-Sanchana ❤️ Sorry endaka nenu ala behvae chesinaduku really sorry but nuvvu tappuga em anukunna akkada em ledu ";
+  title.innerText = "Happy Valentine's Day Lavanya-Sanchana ❤️ My beautiful wife, I love you so much!I'll always love you, even from a distance! Destiny brought us close ";
 
   question.style.display = "none";
   buttons.style.display = "none";
 
   // Change background image
-  document.body.style.background = "url('sanchImj.jpeg')";
+  document.body.style.background = "url('Mouni.jpeg')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 
@@ -43,6 +43,7 @@ window.onload = function () {
   }
 
 };
+
 
 
 
