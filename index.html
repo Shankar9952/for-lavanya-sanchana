@@ -1,38 +1,85 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+window.onload = function () {
 
-<body>
-<div class="container">
+  const yesBtn   = document.getElementById("yes");
+  const noBtn    = document.getElementById("no");
+  const title    = document.getElementById("title");
+  const question = document.getElementById("question");
+  const buttons  = document.getElementById("buttons");
 
-<div id="message-box">
-  <h1>Hey Mouni 💕</h1>
-</div>
+  const messages = [
+    "I don't know where it went wrong... 🌙",
+    "Maybe it was something I did, maybe it was just time.",
+    "But I never stopped caring. Not even for a second. 💛",
+    "You made ordinary days feel like something worth remembering.",
+    "I'm sorry if I ever made you feel unseen. That was never my intention.",
+    "Some people come into your life and quietly change everything...",
+    "You were that person for me. 🍂",
+    "I hope you find every happiness you deserve.",
+    "I hope life is gentle with you, always. 🌸",
+    "And wherever you go —",
+    "Whatever happens next —",
+    "Just know... you were truly, deeply loved. ✨",
+    "— Mouni 💛"
+  ];
 
-<p id="question">Will you be my Valentine?</p>
+  const delays = [0, 4000, 8000, 12000, 16000, 20000, 24000, 28000, 32000, 36000, 39000, 42000, 47000];
 
-<div class="buttons" id="buttons">
-  <button id="yes">YES ❤️</button>
-  <button id="no">NO 🙈</button>
-</div>
+  yesBtn.onclick = function () {
 
-</div>
+    question.style.display = "none";
+    buttons.style.display  = "none";
 
-<audio id="music" autoplay loop>
-  <source src="music.mp3">
-</audio>
+    // Cinematic dark background
+    document.body.style.background = "linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460)";
 
-<script src="script.js"></script>
+    messages.forEach((msg, i) => {
+      setTimeout(() => {
 
-</body>
+        // Fade out
+        title.style.transition = "opacity 0.8s ease";
+        title.style.opacity    = "0";
 
-</html>
+        setTimeout(() => {
+          title.innerText = msg;
 
+          // Special style for her name at the end
+          if (i === messages.length - 1) {
+            title.style.fontSize   = "2.8rem";
+            title.style.color      = "#f5c842";
+            title.style.textShadow = "0 0 30px rgba(245, 200, 66, 0.8)";
+            title.style.fontStyle  = "italic";
+            title.style.letterSpacing = "4px";
+          }
 
+          title.style.opacity = "1";
+        }, 800);
 
+      }, delays[i]);
+    });
 
+    setInterval(createFalling, 400);
+  };
 
+  // No button runs away
+  noBtn.onmouseover = function () {
+    noBtn.style.position = "absolute";
+    noBtn.style.left     = Math.random() * 80 + "%";
+    noBtn.style.top      = Math.random() * 80 + "%";
+  };
+
+  function createFalling() {
+    const el = document.createElement("div");
+    el.className = "heart";
+    el.innerHTML = ["🍂", "🌸", "✨", "💛", "🌙", "⭐"][Math.floor(Math.random() * 6)];
+    el.style.left     = Math.random() * 100 + "vw";
+    el.style.position = "fixed";
+    el.style.top      = "-50px";
+    el.style.fontSize = "1.5rem";
+    el.style.animation = "fall 4s linear forwards";
+    el.style.pointerEvents = "none";
+    el.style.zIndex = "0";
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 4000);
+  }
+
+};
